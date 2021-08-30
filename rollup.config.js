@@ -10,7 +10,9 @@ export default [
       name: "PixiEditor",
       file: pkg.browser,
       format: "umd",
+      globals: { "pixi.js": "PIXI" },
     },
+    external: ["pixi.js"],
     plugins: [
       resolve(),
       commonjs()
@@ -24,6 +26,6 @@ export default [
       { file: pkg.main, format: "cjs" },
       { file: pkg.module, format: "es" },
     ],
-    plugins: [typescript({ tsconfig: "./tsconfig.json" })],
+    external: ["pixi.js"]
   },
 ];
