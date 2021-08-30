@@ -29,6 +29,9 @@
     "clean": "rimraf ./build ./dist ./docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "pixi.js": "^6.1.2"
+  },
   "devDependencies": {
     "@microsoft/api-extractor": "^7.18.7",
     "@rollup/plugin-commonjs": "^20.0.0",
