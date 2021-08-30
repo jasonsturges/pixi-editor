@@ -11,7 +11,9 @@ export default [
       name: "typescriptNpmPackage",
       file: pkg.browser,
       format: "umd",
+      globals: { "pixi.js": "PIXI" },
     },
+    external: ["pixi.js"],
     plugins: [
       resolve(),
       commonjs(),
@@ -31,6 +33,7 @@ export default [
       { file: pkg.main, format: "cjs" },
       { file: pkg.module, format: "es" },
     ],
+    external: ["pixi.js"],
     plugins: [typescript({ tsconfig: "./tsconfig.json" })],
   },
 ];
