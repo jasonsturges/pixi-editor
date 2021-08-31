@@ -22,8 +22,6 @@
   "scripts": {
     "dev": "rollup -c -w",
     "build": "rollup -c",
-    "prebuild:types": "rimraf ./build",
-    "build:types": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run",
     "predocs": "rimraf ./docs",
     "docs": "typedoc src --out docs",
     "clean": "rimraf ./build ./dist ./docs",
@@ -33,17 +31,11 @@
     "pixi.js": "^6.1.2"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.18.7",
     "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
-    "@rollup/plugin-typescript": "^8.2.5",
     "eslint": "^7.32.0",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
-    "rollup": "^2.56.3",
-    "ts-node": "^10.2.1",
-    "tslib": "^2.3.1",
-    "typedoc": "^0.21.9",
-    "typescript": "^4.4.2"
+    "rollup": "^2.56.3"
   }
 }
